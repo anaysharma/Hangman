@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(33, 45, 45);
+}
+
+.content {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem auto 0 auto;
+  align-items: center;
+}
+
+.heading {
+  translate: 0 -4rem;
+  position: fixed;
+  font-size: 1.6rem;
+  color: rgb(183, 250, 255);
+  text-align: center;
+}

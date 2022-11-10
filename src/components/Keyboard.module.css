@@ -1,26 +1,32 @@
 .btn {
+  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  background-color: azure;
-  border: 1px solid grey;
-  border-radius: 5px;
-  font-size: 2rem;
+  aspect-ratio: 1;
+  background-color: rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  border: none;
+  padding: 5px;
+  font-size: 1.4rem;
   text-transform: uppercase;
   padding: .5rem;
-  font-weight: bold;
   cursor: pointer;
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
+  transition: 100ms ease;
 }
 
 .btn.active {
-  background-color: hsl(200, 100%, 50%);
+  background-color: hsl(246, 76%, 71%);
   color: white;
 }
 
 .btn.inactive {
   opacity: .3;
+  scale: 0.9;
 }
 
 .btn:hover:not(:disabled),
 .btn:focus:not(:disabled) {
-  background-color: hsl(200, 100%, 75%);
+  background-color: hsla(237, 100%, 86%, 0.498);
+  color: white;
+  scale: 1.1;
 }

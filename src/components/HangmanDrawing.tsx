@@ -4,7 +4,7 @@ const HEAD: JSX.Element = (
       width: '30px',
       height: '30px',
       borderRadius: '100%',
-      border: '10px solid black',
+      border: '10px solid white',
       position: 'absolute',
       top: '30px',
       right: '-20px',
@@ -17,7 +17,7 @@ const BODY: JSX.Element = (
     style={{
       width: '10px',
       height: '100px',
-      background: 'black',
+      background: 'white',
       position: 'absolute',
       top: '70px',
       right: 0,
@@ -30,7 +30,7 @@ const RIGHT_ARM: JSX.Element = (
     style={{
       width: '80px',
       height: '10px',
-      background: 'black',
+      background: 'white',
       position: 'absolute',
       top: '100px',
       right: '-80px',
@@ -45,7 +45,7 @@ const LEFT_ARM: JSX.Element = (
     style={{
       width: '80px',
       height: '10px',
-      background: 'black',
+      background: 'white',
       position: 'absolute',
       top: '100px',
       right: '10px',
@@ -60,7 +60,7 @@ const RIGHT_LEG: JSX.Element = (
     style={{
       width: '100px',
       height: '10px',
-      background: 'black',
+      background: 'white',
       position: 'absolute',
       top: '160px',
       right: '-100px',
@@ -75,7 +75,7 @@ const LEFT_LEG: JSX.Element = (
     style={{
       width: '100px',
       height: '10px',
-      background: 'black',
+      background: 'white',
       position: 'absolute',
       top: '160px',
       right: '10px',
@@ -109,7 +109,7 @@ export function HangmanDrawing({
           position: 'absolute',
           height: '40px',
           width: '10px',
-          background: 'black',
+          background: 'white',
           top: 0,
           right: 0,
         }}
@@ -118,7 +118,7 @@ export function HangmanDrawing({
         style={{
           height: '10px',
           width: '150px',
-          background: 'black',
+          background: 'white',
           marginLeft: '45px',
         }}
       />
@@ -126,11 +126,11 @@ export function HangmanDrawing({
         style={{
           height: '300px',
           width: '10px',
-          background: 'black',
+          background: 'white',
           marginLeft: '45px',
         }}
       />
-      <div style={{ height: '10px', width: '200px', background: 'black' }} />
+      <div style={{ height: '10px', width: '200px', background: 'white' }} />
     </div>
   );
 }

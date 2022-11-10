@@ -1,0 +1,17 @@
+.wordDiv {
+    font-size: 3rem;
+    display: flex;
+    height: 4.5rem;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.letterSpan {
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.2);
+    padding-inline: 10px;
+    width: calc(1ch + 10px);
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin: 0;
+}
