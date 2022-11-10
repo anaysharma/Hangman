@@ -21,10 +21,10 @@ function App(): JSX.Element {
 
   const addGuessedLetter = useCallback(
     (letter: string) => {
-      if (guessedLetters.includes(letter)) return;
+      if (guessedLetters.includes(letter) || isLoser || isWinner) return;
       setGuessedLetters((currentLetters) => [...currentLetters, letter]);
     },
-    [guessedLetters]
+    [guessedLetters, isLoser, isWinner]
   );
 
   useEffect(() => {
@@ -61,7 +61,11 @@ function App(): JSX.Element {
         {isLoser && 'Wrong guess :( - refresh to try again'}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectGuesses.length} />
-      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+      <HangmanWord
+        guessedLetters={guessedLetters}
+        wordToGuess={wordToGuess}
+        reveal={isLoser}
+      />
       <div style={{ alignSelf: 'stretch' }}>
         <Keyboard
           disabled={isWinner || isLoser}
