@@ -1,6 +1,6 @@
-export function HangmanWord() {
-  const word = 'test';
-  const guessedLetters = ['t'];
+export function HangmanWord(): JSX.Element {
+  const word: string = 'test';
+  const guessedLetters: string[] = ['t'];
 
   return (
     <div
@@ -12,8 +12,9 @@ export function HangmanWord() {
         textTransform: 'uppercase',
         fontFamily: 'monospace',
       }}
-      {...word.split('').map((letter, index) => (
-        <span style={{ borderBlockEnd: '0.1rem solid black' }}>
+    >
+      {word.split('').map((letter, index) => (
+        <span style={{ borderBlockEnd: '10px solid black' }} key={index}>
           <span
             style={{
               visibility: guessedLetters.includes(letter)
@@ -25,6 +26,6 @@ export function HangmanWord() {
           </span>
         </span>
       ))}
-    ></div>
+    </div>
   );
 }

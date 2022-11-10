@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import words from './wordList.json';
-import { HangmanBody } from './components/HangmanBody';
+import { HangmanDrawing } from './components/HangmanDrawing';
 import { HangmanWord } from './components/HangmanWord';
 import { Keyboard } from './components/Keyboard';
 
-function App() {
+function App(): JSX.Element {
   const [wordToGuess, setWordToGuess] = useState(() => {
     return words[Math.floor(Math.random() * words.length)];
   });
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
+  const incorrectGuesses = guessedLetters.filter(
+    (letter) => !wordToGuess.includes(letter)
+  );
 
   return (
     <div
@@ -28,9 +31,11 @@ function App() {
           textAlign: 'center',
         }}
       ></div>
-      <HangmanBody />
+      <HangmanDrawing numberOfGuesses={incorrectGuesses.length} />
       <HangmanWord />
-      {/* <Keyboard /> */}
+      <div style={{ alignSelf: 'stretch' }}>
+        <Keyboard />
+      </div>
     </div>
   );
 }
